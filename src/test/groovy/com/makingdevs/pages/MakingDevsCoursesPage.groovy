@@ -9,7 +9,7 @@ class MakingDevsCoursesPage extends Page{
   static at = { $("h1.section-main-header").text() == "Nuestro entrenamiento" }
 
   static content = {
-    groovyTestingLink(to: GroovyTestingPage){ $('a[href^="/training/groovy-testing"]') }
+    groovyCoursesDiv{ $(".span7",2).children("ul") }
   }
 
 }
