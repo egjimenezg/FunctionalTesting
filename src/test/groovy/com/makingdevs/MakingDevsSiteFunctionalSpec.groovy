@@ -23,13 +23,13 @@ class MakingDevsSiteFunctionalSpec extends GebReportingSpec{
       groovyCoursesDiv.find("a[href^='${_selectorUrl}").click()
 
     then:
-      at GroovyTestingPage
+      at CourseInfoPage
       postTitle.text() == _postTitle
     where:
     _selectorUrl                    | _postTitle
     "/training/groovy-testing"      | "Pruebas en la JVM con Groovy"
     "/training/groovy-essentials"   | "El lenguaje dinámico Groovy"
-    "/training/grails"              | "Desarrollo de aplicaciones con Grails"
+    "/training/grails-intermediate" | "Productividad con Grails"
     "/training/groovy-intermediate" | "Productividad con Groovy"
   }
 
