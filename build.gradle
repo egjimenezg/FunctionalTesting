@@ -35,6 +35,10 @@ drivers.each{ driver ->
   }
 }
 
+chromeTest{
+  systemProperty "webdriver.chrome.driver","${System.properties["user.home"]}/.grails/chromedriver"
+}
+
 test{
   dependsOn drivers.collect{ driver -> tasks["${driver}Test"] }
   enabled = false
